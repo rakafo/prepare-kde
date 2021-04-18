@@ -1,0 +1,5 @@
+---
+- name: upgrade existing packages
+  dnf:
+    name: "*"
+    state: latest

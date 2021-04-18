@@ -1,0 +1,5 @@
+- name: disable avahi-daemon
+  service:
+    name: avahi-daemon
+    state: stopped
+    enabled: no

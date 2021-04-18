@@ -1,0 +1,27 @@
+- name: install fish
+  dnf:
+    name: fish
+    state: latest
+    
+- name: configure fish to start on top of bash for interactive use
+  blockinfile:
+    path: /etc/bashrc
+    block: |
+      # use fish for interactive use'
+      if [ -z "$BASH_EXECUTION_STRING" ]; then exec fish; fi
+
+- name: configure fish to show full path in prompt
+  shell:
+    executable: /usr/bin/fish
+    cmd: set -U fish_prompt_pwd_dir_length 0
+    
+- name: configure fish not to show greeting
+  shell:
+    executable: /usr/bin/fish
+    cmd: set -U fish_greeting ""
+
+- name: configure fish not to show RC in prompt
+  lineinfile:
+    path: /usr/share/fish/functions/fish_prompt.fish
+    regex: '.+set -l last_pipestatus \$pipestatus'
+    state: absent

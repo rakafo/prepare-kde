@@ -1,0 +1,59 @@
+username: root # user which to customize
+
+vnc_username: root
+vnc_password: no
+vnc_instance: 1
+vnc_modify_policykit: yes
+
+foxit_url: https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+
+repos_to_install:
+  - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+  - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+
+packages_to_remove:
+  - calligra-*
+  - dragon
+  - dnfdragora  # dnf gui
+  - falkon 
+  - juk       # cd burner
+  - k3b       # music player
+  - kcharselect # system util
+  - kde-connect
+  - kf5-akonadi-*
+  - kfind
+  - kget
+  - kmahjongg # game
+  - kmines    # game
+  - kpat      # game
+  - konversation # irc
+  - krdc      # remote desktop
+  - krfb  # desktop sharing
+  - krusader
+  - ktorrent
+  - kwrite
+  - kruler
+  - kmousetool
+  - kmouth
+  - khelpcenter # f1 help
+  - plasma-discover
+  - qt5-qdbusviewer
+  - plasma-browser-integration
+  - firewall-config # firewalld gui
+  - kde-partitionmanager
+  - kcolorchooser   # color picker
+  - mediawriter # fedora media writer
+
+packages_to_install:
+  - libreoffice-writer
+  - libreoffice-calc
+  - qbittorrent
+  - vlc
+  - remmina
+  - fuse-exfat
+  - exfat-utils
+
+packages_to_install_flatpak:
+  - im.riot.Riot
+  - org.signal.Signal
+  - com.jetbrains.PyCharm-Community

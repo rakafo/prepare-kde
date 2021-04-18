@@ -1,0 +1,13 @@
+---
+- name: install repos
+  dnf:
+    name: "{{ item }}"
+    state: present
+    disable_gpg_check: yes
+  loop: "{{ repos_to_install }}"
+
+- name: install packages
+  dnf:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ packages_to_install }}"

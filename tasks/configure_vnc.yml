@@ -1,0 +1,103 @@
+---
+- name: install tigervnc-server
+  dnf:
+    name: tigervnc-server
+    state: latest
+
+- name: gather package facts
+  package_facts:
+  
+- block: # < 1.11
+  
+  - name: copy configuration template
+    copy:
+      remote_src: yes
+      src: /lib/systemd/system/vncserver@.service
+      dest: /etc/systemd/system/vncserver@.service
+      
+  - name: edit configuration
+    lineinfile:
+      regexp: "^ExecStart="
+      line: "ExecStart=/usr/bin/vncserver_wrapper {{ vnc_username }} %i -geometry 1920x1080 -localhost"
+      dest: /etc/systemd/system/vncserver@.service
+  
+  - name: systemctl daemon reload
+    command:
+      cmd: systemctl daemon-reload
+      
+  when: ansible_facts.packages['tigervnc-server'].0.version is version('1.11', '<')
+
+- block: # >= 1.11
+  
+  - name: enable vnc for user
+    lineinfile:
+      path: /etc/tigervnc/vncserver.users
+      regexp: "^:{{ vnc_instance }}={{ vnc_username }}"
+      line: ":{{ vnc_instance }}={{ vnc_username }}"
+      
+  - name: set connection parameters
+    blockinfile:
+      path: /etc/tigervnc/vncserver-config-mandatory
+      block: |
+        geometry=1920x1080 
+        localhost 
+        session=plasma
+        
+  when: ansible_facts.packages['tigervnc-server'].0.version is version('1.11', '>=')
+    
+- name: add .vnc/ dir
+  become_user: "{{ vnc_username }}"
+  become: yes
+  file:
+    path: ~/.vnc
+    state: directory
+    mode: 0700
+    
+- name: add .vnc/passwd
+  become_user: "{{ vnc_username }}"
+  become: yes
+  copy:
+    content: ""
+    dest: ~/.vnc/passwd
+    mode: 0600
+
+- name: add blank vnc password
+  become_user: "{{ vnc_username }}"
+  become: yes
+  shell:
+    cmd: echo "" | vncpasswd -f > ~/.vnc/passwd
+  
+- name: enable vnc service
+  service:
+    name: vncserver@:{{ vnc_instance }}
+    state: started
+    enabled: yes
+
+- block: # conditional
+  
+  - name: edit policykit - pspc
+    replace:
+      path: /usr/share/polkit-1/actions/org.debian.pcsc-lite.policy
+      regexp: <allow_any>.+</allow_any>
+      replace: <allow_any>yes</allow_any>
+      
+  - name: edit policykit - color device
+    replace:
+      path: /usr/share/polkit-1/actions/org.freedesktop.color.policy
+      regexp: <allow_any>.+</allow_any>
+      replace: <allow_any>yes</allow_any>
+      
+  - name: edit policykit - network connections
+    replace:
+      path: /usr/share/polkit-1/actions/org.freedesktop.NetworkManager.policy
+      regexp: <allow_any>.+</allow_any>
+      replace: <allow_any>yes</allow_any>
+  
+  - name: edit policykit - repositories
+    replace:
+      path: /usr/share/polkit-1/actions/org.freedesktop.packagekit.policy
+      regexp: <allow_any>.+</allow_any>
+      replace: <allow_any>yes</allow_any>
+      
+  when: 
+    - vnc_modify_policykit

@@ -1,0 +1,5 @@
+- name: disable baloo
+  command:
+    cmd: balooctl disable
+  register: this
+  failed_when: '"Disabling and stopping the File Indexer" not in this.stdout'

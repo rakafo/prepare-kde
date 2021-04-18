@@ -1,0 +1,6 @@
+---
+- name: remove packages
+  dnf:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ packages_to_remove }}"

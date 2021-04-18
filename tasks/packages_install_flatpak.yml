@@ -1,0 +1,15 @@
+---
+- name: install flatpak
+  dnf:
+    name: flatpak
+    state: latest
+    
+- name: install flathub
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    
+- name: install flatpak packages
+  flatpak:
+    name: "{{ item }}"
+  loop: "{{ packages_to_install_flatpak }}"

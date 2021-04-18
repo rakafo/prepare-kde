@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  vars_files: vars/all.yml
+  tasks:
+    
+    - block: # only on Fedora32
+          
+        - import_tasks: tasks/packages_upgrade.yml # prevents graphics issues
+        - import_tasks: tasks/packages_remove.yml
+        - import_tasks: tasks/packages_install.yml
+        - import_tasks: tasks/packages_install_flatpak.yml
+        - import_tasks: tasks/disable_baloo.yml
+        - import_tasks: tasks/disable_avahi.yml
+        - import_tasks: tasks/configure_konsole.yml
+        - import_tasks: tasks/configure_fish.yml
+        - import_tasks: tasks/configure_vnc.yml
+
+      when: 
+        - ansible_facts.distribution == "Fedora"
+        - ansible_facts.distribution_version == "32"
+        
+        
+# configure firefox with ublock

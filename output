@@ -1,0 +1,1071 @@
+
+PLAY [localhost] ****************************************************************************************************************************************************************************
+
+TASK [command] ******************************************************************************************************************************************************************************
+failed: [localhost] (item=calligra-*) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - calligra-*
+  delta: '0:00:00.315724'
+  end: '2020-10-06 14:26:21.536287'
+  item: calligra-*
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:21.220563'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                   Arch        Version             Repository      Size
+    ================================================================================
+    Removing:
+     calligra-core             x86_64      3.1.0-19.fc32       @anaconda       16 M
+     calligra-libs             x86_64      3.1.0-19.fc32       @anaconda       24 M
+     calligra-sheets           x86_64      3.1.0-19.fc32       @anaconda      988 k
+     calligra-sheets-libs      x86_64      3.1.0-19.fc32       @anaconda       11 M
+     calligra-stage            x86_64      3.1.0-19.fc32       @anaconda      9.2 M
+     calligra-stage-libs       x86_64      3.1.0-19.fc32       @anaconda      4.6 M
+     calligra-words            x86_64      3.1.0-19.fc32       @anaconda      266 k
+     calligra-words-libs       x86_64      3.1.0-19.fc32       @anaconda      4.8 M
+    Removing unused dependencies:
+     gsl                       x86_64      2.6-2.fc32          @anaconda      3.3 M
+     libetonyek                x86_64      0.1.9-6.fc32        @anaconda      3.0 M
+     liblangtag                x86_64      0.6.3-2.fc32        @anaconda      218 k
+     liblangtag-data           noarch      0.6.3-2.fc32        @anaconda      1.9 M
+     libodfgen                 x86_64      0.1.7-6.fc32        @anaconda      1.1 M
+     librevenge                x86_64      0.0.4-17.fc32       @anaconda      819 k
+     libspnav                  x86_64      0.2.3-11.fc32       @anaconda       22 k
+     libvisio                  x86_64      0.1.7-3.fc32        @anaconda      790 k
+     libwpd                    x86_64      0.10.3-4.fc32       @anaconda      785 k
+     libwpg                    x86_64      0.3.3-4.fc32        @anaconda      183 k
+     libwps                    x86_64      0.4.10-4.fc32       @anaconda      2.4 M
+     lyx-fonts                 noarch      2.3.4.2-1.fc32      @anaconda      267 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  20 Packages
+  
+    Freed space: 86 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=dragon) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - dragon
+  delta: '0:00:00.314148'
+  end: '2020-10-06 14:26:21.975904'
+  item: dragon
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:21.661756'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Architecture   Version                  Repository         Size
+    ================================================================================
+    Removing:
+     dragon         x86_64         19.12.1-1.fc32           @anaconda         2.2 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 2.2 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=dnfdragora) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - dnfdragora
+  delta: '0:00:00.311459'
+  end: '2020-10-06 14:26:22.422629'
+  item: dnfdragora
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:22.111170'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package            Arch   Version                              Repo       Size
+    ================================================================================
+    Removing:
+     dnfdragora         noarch 2.0.0-2.fc32                         @anaconda 1.4 M
+    Removing unused dependencies:
+     dnfdaemon          noarch 0.3.20-1.fc32                        @anaconda 229 k
+     dnfdaemon-selinux  noarch 0.3.20-1.fc32                        @anaconda   0
+     libyui             x86_64 3.3.3-8.fc32                         @anaconda 891 k
+     libyui-gtk         x86_64 2.44.9-15.fc32                       @anaconda 834 k
+     libyui-mga         x86_64 1.0.8-0.19.gita6a160e.20160313.fc32  @anaconda 114 k
+     libyui-mga-gtk     x86_64 1.0.2-0.20.git22f2cf6.20131215.fc32  @anaconda  99 k
+     libyui-mga-ncurses x86_64 1.0.2-0.20.git026f2e6.20131215.fc32  @anaconda 115 k
+     libyui-mga-qt      x86_64 1.0.3-0.20.gitb508e88.20140119.fc32  @anaconda 103 k
+     libyui-ncurses     x86_64 2.48.3-9.fc32                        @anaconda 1.3 M
+     libyui-qt          x86_64 2.47.1-17.fc32                       @anaconda 1.1 M
+     python3-dnfdaemon  noarch 0.3.20-1.fc32                        @anaconda  46 k
+     python3-yui        x86_64 1.1.2-21.fc32                        @anaconda 2.1 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  13 Packages
+  
+    Freed space: 8.4 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=falkon) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - falkon
+  delta: '0:00:00.308848'
+  end: '2020-10-06 14:26:22.859383'
+  item: falkon
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:22.550535'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package         Architecture    Version               Repository          Size
+    ================================================================================
+    Removing:
+     falkon          x86_64          3.1.0-3.fc32          @anaconda           10 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 10 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=juk) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - juk
+  delta: '0:00:00.318926'
+  end: '2020-10-06 14:26:23.304913'
+  item: juk
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:22.985987'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package      Architecture    Version                  Repository          Size
+    ================================================================================
+    Removing:
+     juk          x86_64          19.12.2-1.fc32           @anaconda          5.3 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 5.3 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=k3b) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - k3b
+  delta: '0:00:00.315636'
+  end: '2020-10-06 14:26:23.744998'
+  item: k3b
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:23.429362'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package               Arch        Version                 Repository      Size
+    ================================================================================
+    Removing:
+     k3b                   x86_64      1:19.08.3-3.fc32        @anaconda       29 M
+    Removing unused dependencies:
+     cdrdao                x86_64      1.2.4-4.fc32            @anaconda      1.6 M
+     cdrskin               x86_64      1.5.2-2.fc32            @anaconda      218 k
+     dvd+rw-tools          x86_64      7.1-32.fc32             @anaconda      428 k
+     genisoimage           x86_64      1.1.11-44.fc32          @anaconda      1.1 M
+     k3b-libs              x86_64      1:19.08.3-3.fc32        @anaconda      2.8 M
+     kf5-libkcddb          x86_64      19.12.2-1.fc32          @anaconda      1.1 M
+     kf5-libkcddb-doc      noarch      19.12.2-1.fc32          @anaconda      540 k
+     libburn               x86_64      1.5.2-2.fc32            @anaconda      380 k
+     libmad                x86_64      0.15.1b-29.fc32         @anaconda      182 k
+     libmpcdec             x86_64      1.2.6-25.fc32           @anaconda       48 k
+     libmusicbrainz5       x86_64      5.1.0-14.fc32           @anaconda      700 k
+     libusal               x86_64      1.1.11-44.fc32          @anaconda      470 k
+     neon                  x86_64      0.30.2-14.fc32          @anaconda      319 k
+     pakchois              x86_64      0.4-21.fc32             @anaconda       30 k
+     wodim                 x86_64      1.1.11-44.fc32          @anaconda      954 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  16 Packages
+  
+    Freed space: 39 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kcharselect) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kcharselect
+  delta: '0:00:00.306008'
+  end: '2020-10-06 14:26:24.175694'
+  item: kcharselect
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:23.869686'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package            Architecture  Version                Repository        Size
+    ================================================================================
+    Removing:
+     kcharselect        x86_64        19.12.2-1.fc32         @anaconda        610 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 610 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kde-connect) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kde-connect
+  delta: '0:00:00.293331'
+  end: '2020-10-06 14:26:24.593884'
+  item: kde-connect
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:24.300553'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                Architecture Version              Repository       Size
+    ================================================================================
+    Removing:
+     kde-connect            x86_64       1.3.5-2.fc32         @anaconda       1.2 M
+    Removing unused dependencies:
+     fuse-sshfs             x86_64       3.7.0-3.fc32         @anaconda       123 k
+     fuse3                  x86_64       3.9.1-1.fc32         @anaconda       118 k
+     fuse3-libs             x86_64       3.9.1-1.fc32         @anaconda       286 k
+     kde-connect-libs       x86_64       1.3.5-2.fc32         @anaconda       1.5 M
+     kdeconnectd            x86_64       1.3.5-2.fc32         @anaconda        36 k
+     libfakekey             x86_64       0.1-24.fc32          @anaconda        33 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  7 Packages
+  
+    Freed space: 3.3 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kf5-akonadi-*) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kf5-akonadi-*
+  delta: '0:00:00.308089'
+  end: '2020-10-06 14:26:25.033713'
+  item: kf5-akonadi-*
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:24.725624'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                       Arch      Version             Repository    Size
+    ================================================================================
+    Removing:
+     kf5-akonadi-calendar          x86_64    19.12.2-1.fc32      @anaconda    2.1 M
+     kf5-akonadi-contacts          x86_64    19.12.2-1.fc32      @anaconda    2.4 M
+     kf5-akonadi-mime              x86_64    19.12.2-1.fc32      @anaconda    822 k
+     kf5-akonadi-notes             x86_64    19.12.2-1.fc32      @anaconda    124 k
+     kf5-akonadi-search            x86_64    19.12.2-1.fc32      @anaconda    1.1 M
+     kf5-akonadi-server            x86_64    19.12.2-1.fc32      @anaconda    8.9 M
+     kf5-akonadi-server-mysql      x86_64    19.12.2-1.fc32      @anaconda    3.4 k
+    Removing dependent packages:
+     akregator                     x86_64    19.12.2-1.fc32      @anaconda    3.9 M
+     akregator-libs                x86_64    19.12.2-1.fc32      @anaconda    2.0 M
+     kgpg                          x86_64    19.12.1-1.fc32      @anaconda    7.6 M
+     kontact                       x86_64    19.12.2-1.fc32      @anaconda    1.6 M
+    Removing unused dependencies:
+     akonadi-import-wizard         x86_64    19.12.2-1.fc32      @anaconda    2.1 M
+     boost-system                  x86_64    1.69.0-15.fc32      @anaconda     16 k
+     boost-thread                  x86_64    1.69.0-15.fc32      @anaconda    171 k
+     grantlee-editor               x86_64    19.12.2-1.fc32      @anaconda    1.1 M
+     grantlee-editor-libs          x86_64    19.12.2-1.fc32      @anaconda    133 k
+     kaddressbook                  x86_64    19.12.2-1.fc32      @anaconda    3.5 M
+     kaddressbook-libs             x86_64    19.12.2-1.fc32      @anaconda    534 k
+     kdepim-addons                 x86_64    19.12.2-1.fc32      @anaconda    8.7 M
+     kdepim-apps-libs              x86_64    19.12.2-1.fc32      @anaconda    699 k
+     kdepim-runtime                x86_64    1:19.12.2-1.fc32    @anaconda     14 M
+     kdepim-runtime-libs           x86_64    1:19.12.2-1.fc32    @anaconda    1.5 M
+     kf5-calendarsupport           x86_64    19.12.2-1.fc32      @anaconda    2.9 M
+     kf5-eventviews                x86_64    19.12.2-1.fc32      @anaconda    2.9 M
+     kf5-grantleetheme             x86_64    19.12.2-2.fc32      @anaconda    228 k
+     kf5-incidenceeditor           x86_64    19.12.2-1.fc32      @anaconda    2.7 M
+     kf5-kalarmcal                 x86_64    19.12.2-1.fc32      @anaconda    878 k
+     kf5-kcalendarcore             x86_64    1:5.68.0-1.fc32     @anaconda    832 k
+     kf5-kcalendarutils            x86_64    19.12.2-1.fc32      @anaconda    1.6 M
+     kf5-kcontacts                 x86_64    1:5.68.0-1.fc32     @anaconda    1.6 M
+     kf5-kdav                      x86_64    19.12.2-1.fc32      @anaconda    353 k
+     kf5-kidentitymanagement       x86_64    19.12.2-1.fc32      @anaconda    373 k
+     kf5-kimap                     x86_64    19.12.2-1.fc32      @anaconda    757 k
+     kf5-kitinerary                x86_64    19.12.2-1.fc32      @anaconda    1.8 M
+     kf5-kldap                     x86_64    19.12.2-1.fc32      @anaconda    594 k
+     kf5-kmailtransport            x86_64    19.12.2-1.fc32      @anaconda    964 k
+     kf5-kmailtransport-akonadi    x86_64    19.12.2-1.fc32      @anaconda    107 k
+     kf5-kmbox                     x86_64    19.12.2-1.fc32      @anaconda     84 k
+     kf5-kmime                     x86_64    19.12.2-1.fc32      @anaconda    520 k
+     kf5-kontactinterface          x86_64    19.12.2-1.fc32      @anaconda    171 k
+     kf5-kpimtextedit              x86_64    19.12.2-3.fc32      @anaconda    1.4 M
+     kf5-kpkpass                   x86_64    19.12.2-1.fc32      @anaconda    105 k
+     kf5-ksmtp                     x86_64    19.12.2-1.fc32      @anaconda    185 k
+     kf5-ktnef                     x86_64    19.12.2-1.fc32      @anaconda    561 k
+     kf5-libgravatar               x86_64    19.12.2-1.fc32      @anaconda    183 k
+     kf5-libkdepim                 x86_64    19.12.2-1.fc32      @anaconda    1.1 M
+     kf5-libkdepim-akonadi         x86_64    19.12.2-1.fc32      @anaconda    460 k
+     kf5-libkleo                   x86_64    19.12.2-1.fc32      @anaconda    2.1 M
+     kf5-libksieve                 x86_64    19.12.2-1.fc32      @anaconda    3.7 M
+     kf5-mailcommon                x86_64    19.12.2-1.fc32      @anaconda    3.5 M
+     kf5-mailimporter              x86_64    19.12.2-1.fc32      @anaconda    1.2 M
+     kf5-mailimporter-akonadi      x86_64    19.12.2-1.fc32      @anaconda     53 k
+     kf5-messagelib                x86_64    19.12.2-1.fc32      @anaconda     14 M
+     kf5-pimcommon                 x86_64    19.12.2-1.fc32      @anaconda    1.4 M
+     kf5-pimcommon-akonadi         x86_64    19.12.2-1.fc32      @anaconda    331 k
+     kmail                         x86_64    19.12.2-1.fc32      @anaconda     14 M
+     kmail-account-wizard          x86_64    19.12.2-1.fc32      @anaconda    2.4 M
+     kmail-libs                    x86_64    19.12.2-1.fc32      @anaconda    3.6 M
+     kontact-libs                  x86_64    19.12.2-1.fc32      @anaconda    305 k
+     korganizer                    x86_64    19.12.2-1.fc32      @anaconda    7.3 M
+     korganizer-libs               x86_64    19.12.2-1.fc32      @anaconda    2.7 M
+     libical                       x86_64    3.0.8-1.fc32        @anaconda    1.7 M
+     libkgapi                      x86_64    19.12.2-1.fc32      @anaconda    2.1 M
+     libkolabxml                   x86_64    1.1.6-14.fc32       @anaconda    3.4 M
+     pim-data-exporter             x86_64    19.12.2-1.fc32      @anaconda    887 k
+     pim-data-exporter-libs        x86_64    19.12.2-1.fc32      @anaconda    459 k
+     pim-sieve-editor              x86_64    19.12.2-1.fc32      @anaconda    1.4 M
+     qt5-qtbase-mysql              x86_64    5.13.2-4.fc32       @anaconda     82 k
+     qt5-qtnetworkauth             x86_64    5.13.2-2.fc32       @anaconda    265 k
+     qt5-qtxmlpatterns             x86_64    5.13.2-2.fc32       @anaconda    3.9 M
+     xerces-c                      x86_64    3.2.2-4.fc32        @anaconda    3.8 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  71 Packages
+  
+    Freed space: 161 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kfind) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kfind
+  delta: '0:00:00.315317'
+  end: '2020-10-06 14:26:25.471697'
+  item: kfind
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:25.156380'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package       Architecture   Version                   Repository         Size
+    ================================================================================
+    Removing:
+     kfind         x86_64         19.12.1-2.fc32            @anaconda         1.3 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 1.3 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kget) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kget
+  delta: '0:00:00.294251'
+  end: '2020-10-06 14:26:25.903900'
+  item: kget
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:25.609649'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package          Architecture  Version                  Repository        Size
+    ================================================================================
+    Removing:
+     kget             x86_64        19.12.1-2.fc32           @anaconda        8.5 M
+    Removing unused dependencies:
+     kget-libs        x86_64        19.12.1-2.fc32           @anaconda        2.0 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  2 Packages
+  
+    Freed space: 10 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kmahjongg) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kmahjongg
+  delta: '0:00:00.312157'
+  end: '2020-10-06 14:26:26.355293'
+  item: kmahjongg
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:26.043136'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                Arch        Version                Repository      Size
+    ================================================================================
+    Removing:
+     kmahjongg              x86_64      19.12.2-1.fc32         @anaconda      4.7 M
+    Removing unused dependencies:
+     libkmahjongg           x86_64      19.12.2-1.fc32         @anaconda      153 k
+     libkmahjongg-data      noarch      19.12.2-1.fc32         @anaconda      6.4 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  3 Packages
+  
+    Freed space: 11 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kmines) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kmines
+  delta: '0:00:00.310417'
+  end: '2020-10-06 14:26:26.787441'
+  item: kmines
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:26.477024'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Architecture   Version                  Repository         Size
+    ================================================================================
+    Removing:
+     kmines         x86_64         19.12.2-1.fc32           @anaconda         1.4 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 1.4 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kpat) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kpat
+  delta: '0:00:00.315809'
+  end: '2020-10-06 14:26:27.228271'
+  item: kpat
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:26.912462'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                   Arch        Version             Repository      Size
+    ================================================================================
+    Removing:
+     kpat                      x86_64      19.12.1-1.fc32      @anaconda      4.9 M
+    Removing unused dependencies:
+     freecell-solver-data      noarch      5.16.0-2.fc32       @anaconda       57 k
+     libfreecell-solver        x86_64      5.16.0-2.fc32       @anaconda      171 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  3 Packages
+  
+    Freed space: 5.2 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=konversation) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - konversation
+  delta: '0:00:00.315560'
+  end: '2020-10-06 14:26:27.668255'
+  item: konversation
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:27.352695'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package             Architecture  Version               Repository        Size
+    ================================================================================
+    Removing:
+     konversation        x86_64        1.7.5-7.fc32          @anaconda         14 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 14 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=krdc) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - krdc
+  delta: '0:00:00.326505'
+  end: '2020-10-06 14:26:28.122403'
+  item: krdc
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:27.795898'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Arch     Version                              Repository   Size
+    ================================================================================
+    Removing:
+     krdc           x86_64   19.12.1-2.fc32                       @anaconda   2.9 M
+    Removing unused dependencies:
+     freerdp        x86_64   2:2.0.0-56.20200207git245fc60.fc32   @anaconda   770 k
+     freerdp-libs   x86_64   2:2.0.0-56.20200207git245fc60.fc32   @anaconda   2.9 M
+     krdc-libs      x86_64   19.12.1-2.fc32                       @anaconda   442 k
+     libwinpr       x86_64   2:2.0.0-56.20200207git245fc60.fc32   @anaconda   1.2 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  5 Packages
+  
+    Freed space: 8.1 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=krfb) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - krfb
+  delta: '0:00:00.294165'
+  end: '2020-10-06 14:26:28.536404'
+  item: krfb
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:28.242239'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package          Architecture  Version                  Repository        Size
+    ================================================================================
+    Removing:
+     krfb             x86_64        19.12.2-1.fc32           @anaconda        2.1 M
+    Removing unused dependencies:
+     krfb-libs        x86_64        19.12.2-1.fc32           @anaconda        301 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  2 Packages
+  
+    Freed space: 2.4 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=krusader) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - krusader
+  delta: '0:00:00.303785'
+  end: '2020-10-06 14:26:28.963946'
+  item: krusader
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:28.660161'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package          Architecture   Version                Repository         Size
+    ================================================================================
+    Removing:
+     krusader         x86_64         2.7.2-2.fc32           @anaconda          15 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 15 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=ktorrent) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - ktorrent
+  delta: '0:00:00.317817'
+  end: '2020-10-06 14:26:29.410475'
+  item: ktorrent
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:29.092658'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                 Arch        Version               Repository      Size
+    ================================================================================
+    Removing:
+     ktorrent                x86_64      5.1.2-2.fc32          @anaconda      8.3 M
+    Removing unused dependencies:
+     GeoIP                   x86_64      1.6.12-6.fc31         @anaconda      359 k
+     GeoIP-GeoLite-data      noarch      2018.06-4.fc31        @anaconda      1.2 M
+     kf5-kplotting           x86_64      5.68.0-1.fc32         @anaconda      141 k
+     ktorrent-libs           x86_64      5.1.2-2.fc32          @anaconda      3.4 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  5 Packages
+  
+    Freed space: 13 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kwrite) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kwrite
+  delta: '0:00:00.313038'
+  end: '2020-10-06 14:26:29.858293'
+  item: kwrite
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:29.545255'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Architecture   Version                  Repository         Size
+    ================================================================================
+    Removing:
+     kwrite         x86_64         19.12.2-1.fc32           @anaconda         734 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 734 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kruler) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kruler
+  delta: '0:00:00.323961'
+  end: '2020-10-06 14:26:30.312823'
+  item: kruler
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:29.988862'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Architecture   Version                  Repository         Size
+    ================================================================================
+    Removing:
+     kruler         x86_64         19.12.1-1.fc32           @anaconda         594 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 594 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kmousetool) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kmousetool
+  delta: '0:00:00.322866'
+  end: '2020-10-06 14:26:30.762125'
+  item: kmousetool
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:30.439259'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package           Architecture  Version                 Repository        Size
+    ================================================================================
+    Removing:
+     kmousetool        x86_64        19.12.2-1.fc32          @anaconda        579 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 579 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kmouth) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kmouth
+  delta: '0:00:00.314450'
+  end: '2020-10-06 14:26:31.202360'
+  item: kmouth
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:30.887910'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package        Architecture   Version                  Repository         Size
+    ================================================================================
+    Removing:
+     kmouth         x86_64         19.12.2-1.fc32           @anaconda         3.6 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 3.6 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=khelpcenter) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - khelpcenter
+  delta: '0:00:00.289308'
+  end: '2020-10-06 14:26:31.614332'
+  item: khelpcenter
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:31.325024'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package           Architecture Version                   Repository       Size
+    ================================================================================
+    Removing:
+     khelpcenter       x86_64       1:19.12.1-2.fc32          @anaconda        16 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 16 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=plasma-discover) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - plasma-discover
+  delta: '0:00:00.317944'
+  end: '2020-10-06 14:26:32.064258'
+  item: plasma-discover
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:31.746314'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                   Arch        Version             Repository      Size
+    ================================================================================
+    Removing:
+     plasma-discover           x86_64      5.18.4-1.fc32       @anaconda      8.3 M
+    Removing unused dependencies:
+     flashrom                  x86_64      1.2-2.fc32          @anaconda      1.9 M
+     fwupd                     x86_64      1.3.9-2.fc32        @anaconda      6.2 M
+     libftdi                   x86_64      1.4-2.fc32          @anaconda      106 k
+     libgcab1                  x86_64      1.4-2.fc32          @anaconda      211 k
+     libsmbios                 x86_64      2.4.2-7.fc32        @anaconda      378 k
+     libxmlb                   x86_64      0.1.14-2.fc32       @anaconda      247 k
+     plasma-discover-libs      x86_64      5.18.4-1.fc32       @anaconda      2.0 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  8 Packages
+  
+    Freed space: 19 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=qt5-qdbusviewer) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - qt5-qdbusviewer
+  delta: '0:00:00.324576'
+  end: '2020-10-06 14:26:32.510434'
+  item: qt5-qdbusviewer
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:32.185858'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package               Architecture Version               Repository       Size
+    ================================================================================
+    Removing:
+     qt5-qdbusviewer       x86_64       5.13.2-5.fc32         @anaconda       145 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 145 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=plasma-browser-integration) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - plasma-browser-integration
+  delta: '0:00:00.311224'
+  end: '2020-10-06 14:26:32.949540'
+  item: plasma-browser-integration
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:32.638316'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                       Arch      Version             Repository    Size
+    ================================================================================
+    Removing:
+     plasma-browser-integration    x86_64    5.18.4-1.fc32       @anaconda    451 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 451 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=firewall-config) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - firewall-config
+  delta: '0:00:00.318136'
+  end: '2020-10-06 14:26:33.395002'
+  item: firewall-config
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:33.076866'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package               Architecture Version               Repository       Size
+    ================================================================================
+    Removing:
+     firewall-config       noarch       0.8.2-2.fc32          @anaconda       1.1 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 1.1 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kde-partitionmanager) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kde-partitionmanager
+  delta: '0:00:00.297451'
+  end: '2020-10-06 14:26:33.813249'
+  item: kde-partitionmanager
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:33.515798'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package                   Arch        Version             Repository      Size
+    ================================================================================
+    Removing:
+     kde-partitionmanager      x86_64      4.1.0-1.fc32        @anaconda      4.5 M
+    Removing unused dependencies:
+     f2fs-tools                x86_64      1.13.0-2.fc32       @anaconda      692 k
+     fatresize                 x86_64      1.0.4-5.fc32        @anaconda       61 k
+     hfsutils                  x86_64      3.2.6-39.fc32       @anaconda      427 k
+     jfsutils                  x86_64      1.1.15-17.fc32      @anaconda      1.2 M
+     kpmcore                   x86_64      4.1.0-1.fc32        @anaconda      3.3 M
+     nilfs-utils               x86_64      2.2.8-2.fc32        @anaconda      514 k
+     udftools                  x86_64      2.1-5.fc32          @anaconda      502 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  8 Packages
+  
+    Freed space: 11 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=kcolorchooser) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - kcolorchooser
+  delta: '0:00:00.323851'
+  end: '2020-10-06 14:26:34.261473'
+  item: kcolorchooser
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:33.937622'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package             Architecture Version                 Repository       Size
+    ================================================================================
+    Removing:
+     kcolorchooser       x86_64       19.12.2-1.fc32          @anaconda       100 k
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 100 k
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+failed: [localhost] (item=mediawriter) => changed=true 
+  ansible_loop_var: item
+  cmd:
+  - dnf
+  - remove
+  - mediawriter
+  delta: '0:00:00.292472'
+  end: '2020-10-06 14:26:34.678181'
+  item: mediawriter
+  msg: non-zero return code
+  rc: 1
+  start: '2020-10-06 14:26:34.385709'
+  stderr: Operation aborted.
+  stderr_lines: <omitted>
+  stdout: |-
+    Dependencies resolved.
+    ================================================================================
+     Package            Architecture  Version                Repository        Size
+    ================================================================================
+    Removing:
+     mediawriter        x86_64        4.1.4-4.fc32           @anaconda        5.7 M
+  
+    Transaction Summary
+    ================================================================================
+    Remove  1 Package
+  
+    Freed space: 5.7 M
+    Is this ok [y/N]:
+  stdout_lines: <omitted>
+
+PLAY RECAP **********************************************************************************************************************************************************************************
+localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

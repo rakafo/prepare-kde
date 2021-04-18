@@ -1,0 +1,17 @@
+- name: create custom css
+  copy:
+    content: |
+      QTabBar::tab:selected {
+      Background: lightgreen;
+      }
+    dest: "{{ ansible_facts.env.HOME }}/.config/konsole.css"
+  become_user: "{{ username }}"
+    
+- name: apply custom css
+  blockinfile:
+    path: ~{{ username }}/.config/konsolerc
+    block: |
+      [TabBar]
+      TabBarUseUserStyleSheet=true
+      TabBarUserStyleSheetFile=file://{{ ansible_facts.env.HOME }}/.config/konsole.css
+  become_user: "{{ username }}"
