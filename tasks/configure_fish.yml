@@ -1,3 +1,7 @@
+- name: add system user
+  user:
+    name: "{{ username }}"
+
 - name: install fish
   dnf:
     name: fish

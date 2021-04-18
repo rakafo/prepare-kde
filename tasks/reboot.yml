@@ -1,0 +1,7 @@
+---
+- debug:
+    msg: will now reboot
+    
+- name: reboot
+  shell:
+    cmd: reboot

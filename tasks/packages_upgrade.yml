@@ -3,3 +3,13 @@
   dnf:
     name: "*"
     state: latest
+  async: 1000
+  poll: 0
+  register: task
+  
+- name: waiting until all packages are upgraded
+  async_status:
+    jid: "{{ task.ansible_job_id }}"
+  register: task_result
+  until: task_result.finished
+  retries: 1000

@@ -1,8 +1,0 @@
----
-- hosts: localhost
-  vars_files: vars/all.yml
-  gather_facts: no
-  tasks:
-  
-  - debug: 
-      msg: "{{ lookup('env', 'XDG_CURRENT_DESKTOP') }}"

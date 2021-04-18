@@ -1,6 +1,5 @@
 ---
 - name: remove packages
   dnf:
-    name: "{{ item }}"
+    name: "{{ packages_to_remove | join(', ') }}"
     state: absent
-  loop: "{{ packages_to_remove }}"

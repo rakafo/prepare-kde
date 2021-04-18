@@ -4,7 +4,7 @@
       QTabBar::tab:selected {
       Background: lightgreen;
       }
-    dest: "{{ ansible_facts.env.HOME }}/.config/konsole.css"
+    dest: "~{{ username }}/.config/konsole.css"
   become_user: "{{ username }}"
     
 - name: apply custom css

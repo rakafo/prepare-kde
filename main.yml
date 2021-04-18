@@ -1,23 +1,21 @@
+# on fresh VM should be done from graphical interface due to KDE creating needed dir's on first run
 ---
 - hosts: localhost
   vars_files: vars/all.yml
   tasks:
-    
-    - block: # only on Fedora32
-          
-        - import_tasks: tasks/packages_upgrade.yml # prevents graphics issues
+      
+    - name: prepare Fedora33 KDE
+      block:
+        - import_tasks: tasks/packages_upgrade.yml # upgrade all before continuing - important. will take a while
         - import_tasks: tasks/packages_remove.yml
         - import_tasks: tasks/packages_install.yml
         - import_tasks: tasks/packages_install_flatpak.yml
+        - import_tasks: tasks/create_user.yml
         - import_tasks: tasks/disable_baloo.yml
         - import_tasks: tasks/disable_avahi.yml
         - import_tasks: tasks/configure_konsole.yml
         - import_tasks: tasks/configure_fish.yml
-        - import_tasks: tasks/configure_vnc.yml
-
+        - import_tasks: tasks/reboot.yml # reboot for a clean state
       when: 
         - ansible_facts.distribution == "Fedora"
-        - ansible_facts.distribution_version == "32"
-        
-        
-# configure firefox with ublock
+        - ansible_facts.distribution_version == "33"

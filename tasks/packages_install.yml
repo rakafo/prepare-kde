@@ -1,13 +1,11 @@
 ---
 - name: install repos
   dnf:
-    name: "{{ item }}"
+    name: "{{ repos_to_install | join(', ') }}"
     state: present
     disable_gpg_check: yes
-  loop: "{{ repos_to_install }}"
 
 - name: install packages
   dnf:
-    name: "{{ item }}"
+    name: "{{ packages_to_install | join(', ') }}"
     state: latest
-  loop: "{{ packages_to_install }}"
